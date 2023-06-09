@@ -103,7 +103,6 @@ export const NewModal = ({ close, actId }: NewModalProps) => {
         <Button size='sm' onPress={() => createNewBeat()}>Create</Button>
         <Button size='sm' onPress={() => close()} light>Cancel</Button>
       </Row>
-      
       <Spacer y={1} />
     </Col>
   )

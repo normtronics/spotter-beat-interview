@@ -11,20 +11,20 @@ interface ModalContainerProps {
 export const ModalContainer = ({ isOpen, closeHandler, title, children, fullScreen = false }: ModalContainerProps) => {
   return (
     <Modal
-        closeButton
-        aria-labelledby="modal-title"
-        open={isOpen}
-        onClose={closeHandler}
-        fullScreen
-      >
-        <Modal.Header>
-          <Text id="modal-title" size={18}>
-            {title}
-          </Text>
-        </Modal.Header>
-        <Modal.Body>
-          {children}
-        </Modal.Body>
-      </Modal>
+      closeButton
+      aria-labelledby="modal-title"
+      open={isOpen}
+      onClose={closeHandler}
+      fullScreen
+    >
+      <Modal.Header>
+        <Text id="modal-title" size={18}>
+          {title}
+        </Text>
+      </Modal.Header>
+      <Modal.Body>
+        {children}
+      </Modal.Body>
+    </Modal>
   )
 }

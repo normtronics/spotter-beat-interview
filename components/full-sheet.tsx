@@ -5,70 +5,71 @@ interface FullSheetProps {
   sheet: SheetModel
 }
 
+const textStyles = {
+  textDecoration: 'underline'
+}
+
+const containerStyles = {
+  borderBottom: '1px solid #ffffff'
+}
+
 export const FullSheet = ({ sheet }: FullSheetProps) => {
   return (
     <Col>
-      <ul>
+      <div>
         {(sheet && sheet.acts) ? sheet.acts.map( (item, index ) => (
-          <li  key={item.act.id}>
+          <div  key={item.act.id}>
             <Text b h2>
               {item.act.name}
             </Text>
-            <ul>
+            <div>
               {item.beats?.map((beats) => (
-                <li key={beats.id} style={{
-                  borderBottom: '1px solid #ffffff'
-                }}>
-                  <Text b css={{
-                    textDecoration: 'underline'
-                  }}>
+                <div 
+                  key={beats.id} 
+                  style={containerStyles}
+                >
+                  <Spacer y={1} />
+                  <Text b i size={18} css={textStyles}>
                     Name
                   </Text>
                   <Text size={16}>
                     {beats.name}
                   </Text>
                   <Spacer y={1} />
-                  <Text b css={{
-                    textDecoration: 'underline'
-                  }}>
+                  <Text b i size={18} css={textStyles}>
                     Time
                   </Text>
                   <Text size={16}>
                     {beats.time}
                   </Text>
                   <Spacer y={1} />
-                  <Text b css={{
-                    textDecoration: 'underline'
-                  }}>
+                  <Text b i size={18} css={textStyles}>
                     Camera Angle
                   </Text>
                   <Text size={16}>
                     {beats.cameraAngle}
                   </Text>
                   <Spacer y={1} />
-                  <Text b css={{
-                    textDecoration: 'underline'
-                  }}>
+                  <Text b i size={18} css={textStyles}>
                     Content
                   </Text>
                   <Text size={16}>
                     {beats.content}
                   </Text>
                   <Spacer y={1} />
-                  <Text b css={{
-                    textDecoration: 'underline'
-                  }}>
+                  <Text b i size={18} css={textStyles}>
                     Notes
                   </Text>
                   <Text size={16}>
                     {beats.notes}
                   </Text>
-                </li>
+                  <Spacer y={1} />
+                </div>
               ))}
-            </ul>
-          </li>
+            </div>
+          </div>
         )) : null}
-      </ul>
+      </div>
     </Col>
   )
 }

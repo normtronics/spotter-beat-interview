@@ -11,11 +11,7 @@ import { getSheet, SheetModel } from '../services/sheet-service'
 
 const lightTheme = createTheme({
   type: 'light',
-  theme: {
-    colors: {
-      background: '#F5F5F4'
-    }
-  }
+  theme: {}
 })
 
 const darkTheme = createTheme({

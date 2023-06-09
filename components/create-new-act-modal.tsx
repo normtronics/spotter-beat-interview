@@ -1,6 +1,5 @@
 import { Button, Col, Input, Row, Spacer } from "@nextui-org/react"
 import { useContext, useState } from "react"
-import { createAct } from "../services/act-service"
 import { addActToSheet } from "../services/sheet-service"
 import { BeatSheetDispatchContext } from "./context/beat-sheet-context"
 

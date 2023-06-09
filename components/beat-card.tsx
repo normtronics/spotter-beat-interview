@@ -1,5 +1,3 @@
-'use client'
-
 import { Button, Card, Col, Popover, Row, Spacer, Text } from "@nextui-org/react"
 import { useContext, useState } from "react"
 import { BeatModel } from "../services/beat-service"
@@ -12,6 +10,10 @@ import { ModalContainer } from "./modal"
 interface BeatCardProps {
   beat: BeatModel,
   actId: number
+}
+
+const textStyles = {
+  textDecoration: 'underline'
 }
 
 export const BeatCard = ({ beat, actId }: BeatCardProps) => {
@@ -33,11 +35,19 @@ export const BeatCard = ({ beat, actId }: BeatCardProps) => {
   
   return (
     <>
-      <Card css={{ width: 500, height: '300px', padding:16 }}>
+      <Card 
+        css={{ 
+          width: 500, 
+          height: '300px', 
+          padding:16 
+        }}>
         <Card.Header>
           <Row justify='space-between'>
             <Text b>{beat.name} @ {beat.time}</Text>
-            <Button size='xs' color='secondary' onPress={() => openFullDetails(true)}>
+            <Button 
+              size='xs' 
+              color='secondary' onPress={() => openFullDetails(true)}
+            >
               Full Details
             </Button>
           </Row>
@@ -70,45 +80,37 @@ export const BeatCard = ({ beat, actId }: BeatCardProps) => {
       </ModalContainer>
       <ModalContainer isOpen={fullDetails} closeHandler={() => openFullDetails(false)} title='Beat Details'>
         <Col>
-          <Text b css={{
-            textDecoration: 'underline'
-          }}>
+          <Text b 
+            css={textStyles}
+          >
             Name
           </Text>
           <Text>
             {beat.name}
           </Text>
           <Spacer y={1} />
-          <Text b css={{
-            textDecoration: 'underline'
-          }}>
+          <Text b css={textStyles}>
             Content
           </Text>
           <Text>
             {beat.content}
           </Text>
           <Spacer y={1} />
-          <Text b css={{
-            textDecoration: 'underline'
-          }}>
+          <Text b css={textStyles}>
             Notes
           </Text>
           <Text>
             {beat.notes}
           </Text>
           <Spacer y={1} />
-          <Text b css={{
-            textDecoration: 'underline'
-          }}> 
+          <Text b css={textStyles}> 
             Time
           </Text>
           <Text>
             {beat.time}
           </Text>
           <Spacer y={1} />
-          <Text b css={{
-            textDecoration: 'underline'
-          }}>
+          <Text b css={textStyles}>
             Camera Angle
           </Text>
           <Text>
