@@ -1,4 +1,4 @@
-const apiUrl = process.env.API_HOST || "http://localhost:8080";
+const apiUrl = process.env.NEXT_PUBLIC_API_HOST;
 
 export interface BeatModel {
   id: number;
