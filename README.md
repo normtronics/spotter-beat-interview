@@ -2,6 +2,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+run `cp .env.example .env` at the root of the repo. This will create the .env needed to run the application.
+
+## Beat Sheet Service
+
+Make sure the Beat Sheet service is running and you have set the endpoint in the env file.
+
+## Run server
+
 First, run the development server:
 
 ```bash
@@ -12,8 +20,5 @@ yarn dev
 pnpm dev
 ```
 
-## Beat Sheet Service
-
-Make sure the Beat Sheet service is running and you have set the endpoint in the env file
 
 
