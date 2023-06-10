@@ -34,7 +34,7 @@ export const Header = () => {
           </Col>
         </Navbar.Brand>
       </Navbar>
-      <ModalContainer isOpen={isOpen} closeHandler={() => setOpen(false)} title='New Beat'>
+      <ModalContainer isOpen={isOpen} closeHandler={() => setOpen(false)} title='Create New Act'>
         <CreateNewActModal  close={() => setOpen(false)}/>
       </ModalContainer>
 

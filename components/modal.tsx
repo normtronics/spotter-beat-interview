@@ -15,7 +15,7 @@ export const ModalContainer = ({ isOpen, closeHandler, title, children, fullScre
       aria-labelledby="modal-title"
       open={isOpen}
       onClose={closeHandler}
-      fullScreen
+      fullScreen={fullScreen}
     >
       <Modal.Header>
         <Text id="modal-title" size={18}>

@@ -64,14 +64,9 @@ export const BeatCard = ({ beat, actId }: BeatCardProps) => {
             <Button size="sm" light onPress={() => setOpen(true)}>
               Edit
             </Button>
-            <Popover>
-              <Popover.Trigger>
-                <Button size="sm" color='error' >Delete</Button>
-              </Popover.Trigger>
-              <Popover.Content>
-                <DeleteBeat deleteFn={deleteBeat} />
-              </Popover.Content>
-            </Popover>
+             <Button size="sm" color='error' onPress={() => deleteBeat()}>
+              Delete
+            </Button>
           </Row>
         </Card.Footer>
       </Card>
